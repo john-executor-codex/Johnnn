@@ -1,10 +1,10 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS  # ← ADICIONE ISSO
+from flask_cors import CORS  # <- CORRETO
 from modules.generator import gerar_codigo
 from modules.executor import executar_codigo
 
 app = Flask(__name__)
-CORS(app)  # ← ADICIONE ISSO
+CORS(app)  # <- ATIVANDO CORS
 
 @app.route("/execute", methods=["POST"])
 def executar():
